@@ -28,5 +28,60 @@
  3.RDK X3 与摄像头在同一网段。
 
  4.RDK X3 可以访问公网（互联网）。
-## 软件准备工作
- 1.[息通开发者平台](https://open.zhilianxi.com/front/#/login)
+ 
+## 软件 准备工作
+ 1.前往[息通开发平台](https://open.zhilianxi.com/front/#/login)注册账号，创建应用获取 APP 鉴权信息；
+ 
+ 2.提交设备号。
+# 试用体验
+## 下载 SDK 及 DEMO。
+**1.配置 DNS 服务。**
+
+请参考 https://developer.d-robotics.cc/rdk_doc/System_configuration/network_blueteeth#dns%E6%9C%8D%E5%8A%A1，完成 DNS 相关配置。
+
+**2.安装及运行。**
+```bash
+# 解压下载的安装包（下载的安装包名称为随机生成，此处以xt举例，请根据实际情况进行调整）
+unzip xt.zip
+
+# 进入项目目录
+cd xt
+
+# 修改安装文件的执行权限
+chmod +x setup.sh
+
+# 以root身份运行
+sudo ./setup.sh
+
+# 安装完成后，检查monitor进程是否存在。（若不存在，请一分钟后再次查看）
+ps -ef | grep -v grep | grep bin/monitor
+
+# monitor日志所在目录
+cd /usr/local/xt/logs
+```
+
+## 配置通道信息。
+1.登录[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，账号密码同息通五洲开发者平台登录账号密码一致。
+
+ ![三1](./image/三1.png)
+
+2.进入系统后点击顶部导航栏中的"设备管理"
+
+ ![三2](./image/三2.png)
+ 
+3.点击网关下的“通道管理”进入通道管理的页面
+
+![三3](./image/三3.png)
+
+4.点击添加通道
+
+![三4](./image/三4.png)
+
+**通道：为网关中继的一条视频流。**
+    
+5.根据提示信息填写相应内容并确认
+
+![三5](./image/三5.png)
+
+在本对话框内填写本通道的接入视频流信息（支持 RTSP、RTMP、FLV 三种接入方式）。
+注：本 DEMO 暂不支持接入国标平台。
