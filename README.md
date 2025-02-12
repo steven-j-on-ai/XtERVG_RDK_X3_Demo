@@ -116,6 +116,7 @@ cd /usr/local/xt/logs
 **注：应用可用流量有限，请合理规划使用。**
 # 集成SDK开发
 ## 架构说明
+![六1](./image/六1.png)
 1.用户通过浏览器发送收看视频指令到信令服务器；
 
 2.信令服务器将收看指令转发给RDK X3盒子；
@@ -130,6 +131,7 @@ cd /usr/local/xt/logs
 
 7.浏览器接收到视频流元信息后立即开始从流媒体服务器拉取视频流及推理标签数据以解码及渲染播放。
 ## 基本原理
+![六2](./image/六2.jpg)
 **前置条件**：RDK X3盒子网关程序（以下简称网关程序）从视频源获取h264数据（当前支持rtsp、rtmp、flv等格式视频流）；
 请注意，网关程序存在两条并行的处理逻辑：其一为h264数据的转发过程；其二为视频数据的解码、压缩、推理及标签数据编码传输过程。
 
@@ -247,18 +249,11 @@ make &&make install
 登录[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，进行观看试用（应用可用流量有限，请合理规划使用）。
 ## 附录
 xttp消息指令说明。
-| 指令类型 | 示例 | 说明 | 参数说明 |
-| --- | --- | --- | --- |
-| 开始拉流指令 | `type=6;control_type=6;` | 拉流端发给推流端，推流端收到后开始向服务器推流，推流成功后给拉流端回“视频流元信息指令” | `type=6`：表示这是一个控制指令<br>`control_type=6`：表示为开始拉流指令 |
-| 视频流元信息指令 | `type=6;control_type=2;uidn=1234567890;ssrc=987654321;server_name=r1.wolianxi.com;download_port=10961;` | 推流端发送给拉流端，拉流端收到后根据指令内容从服务器进行拉流 | `type=6`：表示这是一个控制指令<br>`control_type=2`：表示为视频流信息指令<br>`uidn`：文件传输会话标识符1<br>`ssrc`：文件传输会话标识符2<br>`server_name`：流媒体服务器IP或域名<br>`download_port`：流媒体服务器端口号 |
-| 关闭拉流指令 | `type=6;control_type=3;` | 拉流端发给推流端，推流端收到后结束向服务器推流 | `type=6`：表示这是一个控制指令<br>`control_type=3`：表示为关闭拉流指令 |
-| 询问是否在线指令 | `type=6;control_type=5;` | 收到该指令后需回自己的在线状态指令给发送方 | `type=6`：表示这是一个控制指令<br>`control_type=5`：表示为询问是否在线指令 |
-| 在线状态指令 | `type=6;control_type=4;from=43c50b70203d1d7c6e341bc027a3bc77001;is_online=0;` | 收到该指令后，根据指令内容判断对方在线状态 | `type=6`：表示这是一个控制指令<br>`control_type=4`：表示为在线状态指令<br>`from`：对方账号（如果为通道号，即表示该通道的在线状态）<br>`is_online`：在线状态，0表示离线，1表示在线 |
 
-| 指令类型 | 示例 | 说明 | 参数说明 |
+| 指令类型 | 示例 | 说 明 | 参数 说明 |
 | --- | --- | --- | --- |
-| 开始拉流指令 | `type=6;`<br>`control_type=6;` | 拉流端发给推流端，推流端收到后开始向服务器推流，推流成功后给拉流端回“视频流元信息指令” | `type=6`：表示这是一个控制指令<br>`control_type=6`：表示为开始拉流指令 |
-| 视频流元信息指令 | `type=6;`<br>`control_type=2;`<br>`uidn=1234567890;`<br>`ssrc=987654321;`<br>`server_name=r1.wolianxi.com;`<br>`download_port=10961;` | 推流端发送给拉流端，拉流端收到后根据指令内容从服务器进行拉流 | `type=6`：表示这是一个控制指令<br>`control_type=2`：表示为视频流信息指令<br>`uidn`：文件传输会话标识符1<br>`ssrc`：文件传输会话标识符2<br>`server_name`：流媒体服务器IP或域名<br>`download_port`：流媒体服务器端口号 |
-| 关闭拉流指令 | `type=6;`<br>`control_type=3;` | 拉流端发给推流端，推流端收到后结束向服务器推流 | `type=6`：表示这是一个控制指令<br>`control_type=3`：表示为关闭拉流指令 |
-| 询问是否在线指令 | `type=6;`<br>`control_type=5;` | 收到该指令后需回自己的在线状态指令给发送方 | `type=6`：表示这是一个控制指令<br>`control_type=5`：表示为询问是否在线指令 |
-| 在线状态指令 | `type=6;`<br>`control_type=4;`<br>`from=43c50b70203d1d7c6e341bc027a3bc77001;`<br>`is_online=0;` | 收到该指令后，根据指令内容判断对方在线状态 | `type=6`：表示这是一个控制指令<br>`control_type=4`：表示为在线状态指令<br>`from`：对方账号（如果为通道号，即表示该通道的在线状态）<br>`is_online`：在线状态，0表示离线，1表示在线 |
+| 开始拉流指令 | `type=6;`<br>`control_type=6;` | 拉流端发给推流端，推流端收到后开始向服务器推流，推流成功后给拉流端回“视频流元信息指令”给拉流端。” | `type=6`：表示这是一个控制指令<br>`control_type=6`：表示为开始拉流指令 |
+| 视频流元信息指令 | `type=6;`<br>`control_type=2;`<br>`uidn=1234567890;`<br>`ssrc=987654321;`<br>`server_name=r1.wolianxi.com;`<br>`download_port=10961;` | 推流端发送给拉流端，拉流端收到后根据指令内容从服务器进行拉流。 | `type=6`：表示这是一个控制指令<br>`control_type=2`：表示为视频流信息指令<br>`uidn`：文件传输会话标识符1<br>`ssrc`：文件传输会话标识符2<br>`server_name`：流媒体服务器IP或域名<br>`download_port`：流媒体服务器端口号 |
+| 关闭拉流指令 | `type=6;`<br>`control_type=3;` | 拉流端发给推流端，推流端收到后结束向服务器推流。 | `type=6`：表示这是一个控制指令<br>`control_type=3`：表示为关闭拉流指令 |
+| 询问是否在线指令 | `type=6;`<br>`control_type=5;` | 收到该指令后需回自己的在线状态指令给发送方。 | `type=6`：表示这是一个控制指令<br>`control_type=5`：表示为询问是否在线指令 |
+|  在 线状态指令 | `type=6;`<br>`control_type=4;`<br>`from=43c50b70203d1d7c6e341bc027a3bc77001;`<br>`is_online=0;` | 收到该指令后，根据指令内容判断对方在线状态 | `type=6`：表示这是一个控制指令<br>`control_type=4`：表示为在线状态指令<br>`from`：对方账号（如果为通道号，即表示该通道的在线状态）<br>`is_online`：在线状态，0表示离线，1表示在线 |
