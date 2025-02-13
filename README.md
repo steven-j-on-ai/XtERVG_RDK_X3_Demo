@@ -33,6 +33,7 @@
  1.前往[息通开发平台](https://open.zhilianxi.com/front/#/login)注册账号，创建应用获取 APP 鉴权信息；
  
  2.提交设备号。
+ 可参考[息通开发平台使用指南](https://github.com/steven-j-on-ai/XtERVGDemo/blob/main/README2.md#%E6%81%AF%E9%80%9A%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)，进行相关操作。
 # 试用体验
 ## 下载 SDK 及 DEMO。
 **1.配置 DNS 服务。**
@@ -61,30 +62,8 @@ cd /usr/local/xt/logs
 ```
 
 ## 配置通道信息。
-1.登录[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，账号密码同息通五洲开发者平台登录账号密码一致。
 
- ![三1](./image/三1.png)
-
-2.进入系统后点击 顶部导航栏 中的"设备管理"。
-
- ![三2](./image/三2.png)
- 
-3.点击网关下的“通道管理”进入通道管理的页面。
-
-![三3](./image/三3.png)
-
-4.点击添加通道。
-
-![三4](./image/三4.png)
-
-**通道：为网关中继的一条视频流。**
-    
-5.根据提示信息填写相应内容并确认。
-
-![三5](./image/三5.png)
-
-在本对话框内填写本通道的接入视频流信息（支持 RTSP、RTMP、FLV 三种接入方式）。
-注：本 DEMO 暂不支持接入国标平台。
+此部分可参考[飞流可靠安防视频平台使用指南](https://github.com/steven-j-on-ai/XtERVGDemo/blob/main/README2.md#%E9%A3%9E%E6%B5%81%E5%8F%AF%E9%9D%A0%E5%AE%89%E9%98%B2%E8%A7%86%E9%A2%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)的配置通道部分，进行相关操作。
 ## 检查通道视频及观看试用。
 1.检查通道视频（在RDK X3盒子上运行）
 ```bash
@@ -95,24 +74,8 @@ ps -ef | grep -v grep | grep bin/xftp
 cd /usr/local/xt/logs
 ```
 2.查看通道视频
+此部分可参考[飞流可靠安防视频平台使用指南](https://github.com/steven-j-on-ai/XtERVGDemo/blob/main/README2.md#%E9%A3%9E%E6%B5%81%E5%8F%AF%E9%9D%A0%E5%AE%89%E9%98%B2%E8%A7%86%E9%A2%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)的查看观看体验部分，进行相关操作。
 
-（1） 在[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，点击顶部导航栏中的“视频中心”。
-
- ![四2 (1)](./image/四1.png)
- 
-（2） 在“视频中心”的“实时视频”部分点击网关，选择先前添加的通道进行查看。
-
-![四2](./image/四2.png)
-
-（3） 系统目前支持“可靠模式”与“普通模式”两种观看模式。
-
-![四3](./image/四3.png)
-
-边缘AI视频标注仅能使用可靠模式进行体验，请下载插件。插件安装请参考飞流视频播放器插件使用说明。
-
-（4） 观看效果。https://www.bilibili.com/video/BV1PTKHegEor/
-
-**注：应用可用流量有限，请合理规划使用。**
 # 集成SDK开发
 ## 架构说明
 ![六1](./image/六1.png)
@@ -256,3 +219,11 @@ xttp消息指令说明。
 | 关闭拉流指令 | `type=6;`<br>`control_type=3;` | 拉流端发给推流端，推流端收到后结束向服务器推流。 | `type=6`：表示这是一个控制指令<br>`control_type=3`：表示为关闭拉流指令 |
 | 询问是否在线指令 | `type=6;`<br>`control_type=5;` | 收到该指令后需回自己的在线状态指令给发送方。 | `type=6`：表示这是一个控制指令<br>`control_type=5`：表示为询问是否在线指令 |
 |  在线状态指令 | `type=6;`<br>`control_type=4;`<br>`from=43c50b70203d1d7c6e341bc027a3bc77001;`<br>`is_online=0;` | 收到该指令后，根据指令内容判断对方在线状态 | `type=6`：表示这是一个控制指令<br>`control_type=4`：表示为在线状态指令<br>`from`：对方账号（如果为通道号，即表示该通道的在线状态）<br>`is_online`：在线状态，0表示离线，1表示在线 |
+## 联系我们
+**如果您在开发过程中遇到问题无法解决可以通过以下方式联系我们**
+
+联系电话：010-64759451
+
+微信二维码:扫码下方二维码后获取进群二维码，再长按识别二维码即可进群。
+
+![微信二维码](./image/qrCode.jpg)
