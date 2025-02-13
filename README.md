@@ -1,3 +1,5 @@
+English| [简体中文](./README_cn.md)
+
 # Feiliu Edge AI Video Gateway
 
 This project contains the source code deployed for the Feiliu Edge AI Video Gateway, which is suitable for video AI recognition and real-time transmission in scenarios such as emergency response, security, and drone inspection. It features strong resistance to weak network conditions, effectively solving issues like jitter, delay, and screen tearing during remote video transmission, and achieves ultra-low latency remote real-time playback of AI-annotated video streams. This solution is based on the RDK X3 architecture, providing a powerful communication engine for the collaboration of intelligent agents. Developers can build real-time AI video applications tailored to their specific use cases based on this engine.
