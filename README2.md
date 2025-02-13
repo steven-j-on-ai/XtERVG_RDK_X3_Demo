@@ -1,3 +1,5 @@
+English| [简体中文](./README2_cn.md)
+
 # Introduction
 This section aims to provide developers with the key information needed during the project development process, including how to obtain APP authentication information and the runnable Demo program. Additionally, it details how to configure related information on the video cloud platform and how to view real-time video.
 
