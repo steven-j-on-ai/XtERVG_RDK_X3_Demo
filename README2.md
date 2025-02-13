@@ -1,91 +1,92 @@
-# 简介
-本部分旨在为开发者提供项目开发过程中所需的关键信息，包括如何获取APP 鉴权信息及可运行的Demo程序。同时，详细介绍了如何在视频云平台配置相关信息，以及如何查看实时视频。
+# Introduction
+This section aims to provide developers with the key information needed during the project development process, including how to obtain APP authentication information and the runnable Demo program. Additionally, it details how to configure related information on the video cloud platform and how to view real-time video.
 
-# 息通开发平台使用指南
-## 注册登陆
-前往[息通开发平台注册](https://open.zhilianxi.com/front/index.html#/register)，根据页面提示输入对应信息后进行注册。注册成功后即可进行登陆。
+# Xitong Developer Platform User Guide
+## Registration and Login
+Visit the [Xitong Developer Platform Registration](https://open.zhilianxi.com/front/index.html#/register) page, enter the required information as prompted, and complete the registration. Once registered, you can log in.
 
- ![七1](./image/七1.jpg)
-## 创建应用
-登陆成功后进入应用中心，创建应用获取APP鉴权信息。创建APP 类型选择为边缘AI视频网关（RDK X3架构），其他信息可根据实际情况填写。
+![Image 1](./image/七1.jpg)
 
-![七2](./image/七2.jpg)
-## 提交设备号
-应用创建成功后，进入应用详情提交设备号获取可运行的Demo程序及相关SDK。
+## Create an Application
+After logging in, enter the application center to create an application and obtain the APP authentication information. Choose the application type as "Edge AI Video Gateway (RDK X3 Architecture)", and fill in other details as appropriate.
 
-1.请下载RDK X3平台设备号工具
+![Image 2](./image/七2.jpg)
 
-![七3](./image/七3.jpg)
+## Submit Device ID
+After successfully creating the application, go to the application details and submit the device ID to obtain the runnable Demo program and related SDK.
 
-2.获取设备号
+1. Download the RDK X3 platform device ID tool.
+
+![Image 3](./image/七3.jpg)
+
+2. Obtain the Device ID
 ```ba
-# 给工具执行权限
+# Grant execution permission to the tool
 chmod +x get_device_id
 
-# 获取设备号
+# Obtain the device ID
 ./get_device_id
 ```
-3.提交设备号
+3. Submit Device ID
+![Figure 74](./image/七4.jpg)
 
-![七4](./image/七4.jpg)
-## 获取SDK及DEMO
-设备号提交成功后，页面将跳转至第二部分“下载并试用”。这里需要等待工作人员为您制作相应的开发包，制作完成后会给您发送短信。届时即可下载。
+## Obtain SDK and DEMO
+After successfully submitting the device ID, the page will redirect to the second part "Download and Trial". You will need to wait for the staff to prepare the corresponding development package for you. Once completed, you will receive a text message. You can then proceed to download it.
 
-![七5](./image/七5.jpg)
+![Figure 75](./image/七5.jpg)
 
+# Feiliu Reliable Security Video Platform Usage Guide
+## Login
+Log in to the [Feiliu Reliable Security Video Platform](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login) with the same account and password as the Xitong Wuzhou Developer Platform.
 
-# 飞流可靠安防视频平台使用指南
-## 登陆
-登录[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，账号密码同息通五洲开发者平台登录账号密码一致。
+![Figure 31](./image/三1.png)
 
- ![三1](./image/三1.png)
+## Configure Channels
+1. After entering the system, click on "Device Management" in the top navigation bar.
 
-## 配置通道
-1.进入系统后点击 顶部导航栏 中的"设备管理"。
+   ![Figure 32](./image/三2.png)
 
- ![三2](./image/三2.png)
- 
-2.点击网关下的“通道管理”进入通道管理的页面。
+2. Click on "Channel Management" under the gateway to enter the channel management page.
 
-![三3](./image/三3.png)
+   ![Figure 33](./image/三3.png)
 
-3.点击添加通道。
+3. Click on "Add Channel".
 
-![三4](./image/三4.png)
+   ![Figure 34](./image/三4.png)
 
-**通道：为网关中继的一条视频流。**
-    
-4.根据提示信息填写相应内容并确认。
+**Channel: A video stream relayed by the gateway.**
 
-![三5](./image/三5.png)
+4. Fill in the corresponding information according to the prompts and confirm.
 
-在本对话框内填写本通道的接入视频流信息（支持 RTSP、RTMP、FLV 三种接入方式）。
-注：本 DEMO 暂不支持接入国标平台。
-## 观看体验。
-1.在[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，点击顶部导航栏中的“视频中心”。
+   ![Figure 35](./image/三5.png)
 
- ![四2 (1)](./image/四1.png)
- 
-2. 在“视频中心”的“实时视频”部分点击网关，选择先前添加的通道进行查看。
+Fill in the access information for the video stream of this channel in this dialog box (supports three access methods: RTSP, RTMP, and FLV).  
+**Note:** This DEMO currently does not support access to the national standard platform.
 
-![四2](./image/四2.png)
+## Viewing Experience
+1. On the [Feiliu Reliable Security Video Platform](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login), click on "Video Center" in the top navigation bar.
 
-3. 系统目前支持“可靠模式”与“普通模式”两种观看模式。
+   ![Figure 41](./image/四1.png)
 
-![四3](./image/四3.png)
+2. In the "Real-time Video" section of "Video Center", click on the gateway and select the previously added channel to view.
 
-边缘AI视频标注仅能使用可靠模式进行体验，请下载插件。插件安装请参考[飞流视频播放器插件使用说明](https://monitor.zhilianxi.com/d/plugin_info.pdf)。
+   ![Figure 42](./image/四2.png)
 
-4. 观看效果。https://www.bilibili.com/video/BV1PTKHegEor/
+3. The system currently supports two viewing modes: "Reliable Mode" and "Normal Mode".
 
-**注：应用可用流量有限，请合理规划使用。**
+   ![Figure 43](./image/四3.png)
 
-## 联系我们
-**如果您在开发过程中遇到问题无法解决可以通过以下方式联系我们**
+Edge AI video annotation can only be experienced in Reliable Mode. Please download the plugin. For plugin installation, refer to the [Feiliu Video Player Plugin User Manual](https://monitor.zhilianxi.com/d/plugin_info.pdf).
 
-联系电话：010-64759451
+4. Viewing effect: [Feiliu Edge AI Video Gateway Remote Viewing Effect on Bilibili](https://www.bilibili.com/video/BV1PTKHegEor/)
 
-微信二维码:扫码下方二维码后获取进群二维码，再长按识别二维码即可进群。
+**Note:** The application's available traffic is limited, please plan your usage accordingly.
 
-![微信二维码](./image/qrCode.jpg)
+## Contact Us
+**If you encounter any problems during the development process that you cannot solve, you can contact us through the following methods:**
 
+Contact Number: 010-64759451
+
+WeChat QR Code: Scan the QR code below to obtain the group QR code, and then long press to identify the QR code to join the group.
+
+![WeChat QR Code](./image/qrCode.jpg)
