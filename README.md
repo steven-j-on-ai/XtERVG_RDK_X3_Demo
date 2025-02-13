@@ -110,15 +110,7 @@ cd /usr/local/xt/logs
 
 边缘AI视频标注仅能使用可靠模式进行体验，请下载插件。插件安装请参考飞流视频播放器插件使用说明。
 
-（4） 观看效果。
-
-![动图描述](./20250122153221.gif)
-
-1
-![动图描述](https://open.zhilianxi.com//d/20250122153605.gif)
-2
-
-![动图描述](./image/2.gif)
+（4） 观看效果。https://www.bilibili.com/video/BV1PTKHegEor/
 
 **注：应用可用流量有限，请合理规划使用。**
 # 集成SDK开发
