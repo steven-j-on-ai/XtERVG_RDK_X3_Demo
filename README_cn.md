@@ -181,7 +181,7 @@ int add_xftp_frame(const char *h264oraac, int insize, int type, uint32_t timesta
 # 关闭多媒体服务器的连接
 void stop_session0(uint32_t uidn, uint32_t ssrc);
 
-# 停止 RTSP 拉流
+# 停止RTSP拉流
 void stop_rtsp_over_tcp_thread(void);
 
 # 释放解码器
@@ -207,7 +207,7 @@ vi xftp.cpp
  #define LICENSE_KEY "应用APP License"
 
 # 编译源码并安装
-make &&make install
+make && make install
 ```
 ## 观看试用
 登录[飞流可靠安防视频平台](https://monitor.zhilianxi.com/videoMonitorPlatform/index.html#/login)，进行观看试用（应用可用流量有限，请合理规划使用）。
@@ -216,7 +216,7 @@ xttp消息指令说明。
 
 | 指令类型 | 示例 | 说明 | 参数说明 |
 | --- | --- | --- | --- |
-| 开始拉流指令 | `type=6;`<br>`control_type=6;` | 拉流端发给推流端，推流端收到后开始向服务器推流，推流成功后给拉流端回“视频流元信息指令”给拉流端。” | `type=6`：表示这是一个控制指令<br>`control_type=6`：表示为开始拉流指令 |
+| 开启拉流指令 | `type=6;`<br>`control_type=6;` | 拉流端发给推流端，推流端收到后开始向服务器推流，推流成功后给拉流端回“视频流元信息指令”给拉流端。” | `type=6`：表示这是一个控制指令<br>`control_type=6`：表示为开启拉流指令 |
 | 视频流元信息指令 | `type=6;`<br>`control_type=2;`<br>`uidn=1234567890;`<br>`ssrc=987654321;`<br>`server_name=r1.wolianxi.com;`<br>`download_port=10961;` | 推流端发送给拉流端，拉流端收到后根据指令内容从服务器进行拉流。 | `type=6`：表示这是一个控制指令<br>`control_type=2`：表示为视频流信息指令<br>`uidn`：文件传输会话标识符1<br>`ssrc`：文件传输会话标识符2<br>`server_name`：流媒体服务器IP或域名<br>`download_port`：流媒体服务器端口号 |
 | 关闭拉流指令 | `type=6;`<br>`control_type=3;` | 拉流端发给推流端，推流端收到后结束向服务器推流。 | `type=6`：表示这是一个控制指令<br>`control_type=3`：表示为关闭拉流指令 |
 | 询问是否在线指令 | `type=6;`<br>`control_type=5;` | 收到该指令后需回自己的在线状态指令给发送方。 | `type=6`：表示这是一个控制指令<br>`control_type=5`：表示为询问是否在线指令 |
