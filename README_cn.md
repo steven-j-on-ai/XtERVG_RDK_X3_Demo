@@ -32,15 +32,15 @@
  4.RDK X3 可以访问公网（互联网）。
  
 ## 软件准备工作
- 1.前往[息通开发平台](https://open.zhilianxi.com/front/#/login)注册账号，创建应用获取 APP 鉴权信息；
+ 1.前往<a href="https://open.zhilianxi.com/front/#/login" target="_blank">息通开发平台</a>注册账号，创建应用获取 APP 鉴权信息；
  
  2.提交设备号。
- 可参考[息通开发平台使用指南](https://github.com/steven-j-on-ai/XtERVGDemo/blob/main/README2.md#%E6%81%AF%E9%80%9A%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)，进行相关操作。
+ 可参考<a href="https://github.com/steven-j-on-ai/XtERVGDemo/blob/main/README2.md#%E6%81%AF%E9%80%9A%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97" target="_blank">息通开发平台使用指南</a>，进行相关操作。
 # 试用体验
 ## 下载 SDK 及 DEMO。
 **1.配置 DNS 服务。**
 
-请参考 https://developer.d-robotics.cc/rdk_doc/System_configuration/network_blueteeth#dns%E6%9C%8D%E5%8A%A1 ，完成DNS配置。
+请参考<a href="https://developer.d-robotics.cc/rdk_doc/System_configuration/network_blueteeth#dns%E6%9C%8D%E5%8A%A1" target="_blank">RDK套件网络与蓝牙配置</a>，完成DNS配置。
 
 **2.安装及运行。**
 ```ba
