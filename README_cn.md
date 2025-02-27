@@ -53,10 +53,10 @@ unzip xt.zip
 cd xt
 
 # 修改安装文件的执行权限
-chmod +x setup.sh
+chmod +x setup_rdkx3.sh
 
 # 以root身份运行
-sudo ./setup.sh
+sudo ./setup_rdkx3.sh
 
 # 安装完成后，检查monitor进程是否存在。（若不存在，请一分钟后再次查看）
 ps -ef | grep -v grep | grep bin/monitor
@@ -107,9 +107,9 @@ cd /usr/local/xt/logs
 
 （1） 网关程序将接收的h264数据输送至解码器；
 
-（2） 另一线程将解码后的YUV数据输送至VPS；
+（2） 另一线程将解码后的yuv数据输送至VPS；
 
-（3） 输出线程从VPS中读取压缩后的YUV数据，并将其喂入BPU；
+（3） 输出线程从VPS中读取压缩后的yuv数据，并将其喂入BPU；
 
 （4） 后处理线程从BPU中读取推理结果数据在进行后处理后获得视频标签数据；
 
