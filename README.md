@@ -57,10 +57,10 @@ unzip xt.zip
 cd xt
 
 # Modify the execution permission of the installation file
-chmod +x setup.sh
+chmod +x setup_rdkx3.sh
 
 # Run as root
-sudo ./setup.sh
+sudo ./setup_rdkx3.sh
 
 # After installation, check if the monitor process exists. (If not, check again after one minute)
 ps -ef | grep -v grep | grep bin/monitor
@@ -105,7 +105,7 @@ Note that the gateway program has two parallel processing logics: one is the for
    
    (2) Another thread conveys the decoded yuv data to the VPS.
    
-   (3) The output thread reads the compressed YUV data from the VPS and feeds it into the BPU.
+   (3) The output thread reads the compressed yuv data from the VPS and feeds it into the BPU.
    
    (4) The post-processing thread reads the inference result data from the BPU, performs post-processing to obtain video label data.
    
