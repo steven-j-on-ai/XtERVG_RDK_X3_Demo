@@ -20,8 +20,8 @@
 
 | 硬件        | 平台             |操作系统          |
 |-----------------|-------------------------|----------------|
-| RDK X3开发板    | RDKX3   | Ubuntu 20、Ubuntu 22      |
-| RDK X3盒子      |  RDKX3   | Ubuntu 20、Ubuntu 22   |
+| RDK X3开发板    | RDK X3   | Ubuntu 20、Ubuntu 22      |
+| RDK X3盒子      |  RDK X3   | Ubuntu 20、Ubuntu 22   |
 
 # 准备工作
 ## 硬件准备工作
