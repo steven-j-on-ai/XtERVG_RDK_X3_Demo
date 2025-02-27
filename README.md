@@ -7,7 +7,7 @@ This project contains the source code deployed for the Feiliu Edge AI Video Gate
 # Introduction
 
 ## Functional Introduction
-The Feiliu Edge AI Video Gateway primarily addresses issues such as jitter, delay, screen tearing, and lack of intelligence encountered during remote video transmission in various scenarios (security, emergency response, drones, etc.). The gateway integrates a highly reliable and real-time proprietary communication middleware, achieving reliable video transmission with a packet loss rate of over 70% and a latency of only 0.2 seconds, significantly outperforming traditional real-time video transmission methods (such as RTMP, RTSP, WebRTC, etc.). Combined with the excellent AI analysis capabilities of RDK X3, it enables smooth display of remote ultra-low latency real-time AI-annotated video streams.
+The Feiliu Edge AI Video Gateway primarily addresses issues such as jitter, delay, screen tearing, and lack of intelligence encountered during remote video transmission in various scenarios (security, emergency response, drones, etc.). The gateway integrates a highly reliable and real-time proprietary communication middleware, achieving reliable video transmission with a packet loss rate of over 80% and a latency of only 0.2 seconds, significantly outperforming traditional real-time video transmission methods (such as RTMP, RTSP, WebRTC, etc.). Combined with the excellent AI analysis capabilities of RDK X3, it enables smooth display of remote ultra-low latency real-time AI-annotated video streams.
 
 ## Application Architecture
 ![Figure 1](./image/1.png)
@@ -16,7 +16,7 @@ The main role of the RDK X3 box is to extract video streams from the local area 
 ## Feature Introduction
 **1. Remote Real-time Video Viewing**
 
-The Feiliu Edge AI Video Gateway features high reliability and low latency, with a packet loss resistance of over 70% and a latency of only 0.2 seconds.
+The Feiliu Edge AI Video Gateway features high reliability and low latency, with a packet loss resistance of over 80% and a latency of only 0.2 seconds.
 
 **2. AI Annotation Structuring**
 
@@ -24,9 +24,10 @@ AI annotation structuring allows real-time adjustment of annotation content duri
 
 # Supported Platforms
 
-| Platform | Operating System |
-|----------|------------------|
-| RDK X3   | Ubuntu 20, Ubuntu 22 |
+| Hardware       | Platform    | Operating System          |
+|----------------|-------------|---------------------------|
+| RDK X3 Dev Board | RDK X3   | Ubuntu 20, Ubuntu 22      |
+| RDK X3 Box      | RDK X3   | Ubuntu 20, Ubuntu 22      |
 
 # Preparation
 
